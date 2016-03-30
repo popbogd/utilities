@@ -37,7 +37,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 						.logoutSuccessUrl("/index.html")
 				.and()
 				.authorizeRequests()
-					.antMatchers("/fonts/**", "/js/**", "/css/**", "/connect/*")
+					.antMatchers("/static/**","/webjars/**","/fonts/**", "/js/**", "/css/**", "/connect/*")
 						.permitAll()
 					.antMatchers("/admin/**")
 						.hasRole("ADMIN")
